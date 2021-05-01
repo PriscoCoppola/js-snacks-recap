@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jSnack</title>
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- VUE -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="root">
+        <div class="container">
+            <ul>
+                <li 
+                    v-for="(contact, index) in contacts"
+                    :class="{ red: contact.active === false }"
+                    @click="surname(contact, index)"
+                >
+                {{ contact.name }} {{ contact.surname }}</li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <!-- JS -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
